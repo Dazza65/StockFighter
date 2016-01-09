@@ -21,9 +21,42 @@ class StockFighterTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGetStockPriceGreaterThanZero() {
+        
+        var expectation:XCTestExpectation?
+        
+        expectation = self.expectationWithDescription("Asynch getStockPrice call")
+        
+        let stockService = StockService()
+        
+        stockService.getStockPrice("TESTEX", symbol: "FOOBAR", completionHandler:{(price:Double) -> Void in
+            print("value: \(price)")
+            
+            XCTAssert(price > 0, "The price should be greater than zero")
+            
+            expectation?.fulfill()
+        })
+        
+        self.waitForExpectationsWithTimeout(10.0, handler: nil)
+    }
+    
+    func testOrderbook() {
+        
+        var expectation:XCTestExpectation?
+        
+        expectation = self.expectationWithDescription("Asynch testOrderbook call")
+        
+        let stockService = StockService()
+        
+        stockService.getOrderbook("TESTEX", symbol: "FOOBAR", completionHandler:{(price:Double) -> Void in
+            print("value: \(price)")
+            
+//            XCTAssert(price > 0, "The price should be greater than zero")
+            
+            expectation?.fulfill()
+        })
+        
+        self.waitForExpectationsWithTimeout(10.0, handler: nil)
     }
     
     func testPerformanceExample() {
