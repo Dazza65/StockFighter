@@ -15,6 +15,8 @@
 		EBE3D2F51C40DE0E00DC23CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE3D2F31C40DE0E00DC23CE /* LaunchScreen.storyboard */; };
 		EBE3D3001C40DE0F00DC23CE /* StockFighterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE3D2FF1C40DE0F00DC23CE /* StockFighterTests.swift */; };
 		EBE3D30B1C40DE0F00DC23CE /* StockFighterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE3D30A1C40DE0F00DC23CE /* StockFighterUITests.swift */; };
+		EBE3D31B1C40DF8700DC23CE /* StockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE3D31A1C40DF8700DC23CE /* StockService.swift */; };
+		EBE3D31C1C40DF8700DC23CE /* StockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE3D31A1C40DF8700DC23CE /* StockService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		EBE3D3061C40DE0F00DC23CE /* StockFighterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockFighterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE3D30A1C40DE0F00DC23CE /* StockFighterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockFighterUITests.swift; sourceTree = "<group>"; };
 		EBE3D30C1C40DE0F00DC23CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBE3D31A1C40DF8700DC23CE /* StockService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,7 @@
 				EBE3D2F11C40DE0E00DC23CE /* Assets.xcassets */,
 				EBE3D2F31C40DE0E00DC23CE /* LaunchScreen.storyboard */,
 				EBE3D2F61C40DE0E00DC23CE /* Info.plist */,
+				EBE3D31A1C40DF8700DC23CE /* StockService.swift */,
 			);
 			path = StockFighter;
 			sourceTree = "<group>";
@@ -261,6 +265,7 @@
 			files = (
 				EBE3D2ED1C40DE0E00DC23CE /* DetailViewController.swift in Sources */,
 				EBE3D2EB1C40DE0E00DC23CE /* MasterViewController.swift in Sources */,
+				EBE3D31B1C40DF8700DC23CE /* StockService.swift in Sources */,
 				EBE3D2E91C40DE0E00DC23CE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBE3D31C1C40DF8700DC23CE /* StockService.swift in Sources */,
 				EBE3D3001C40DE0F00DC23CE /* StockFighterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
