@@ -29,7 +29,7 @@ class StockFighterTests: XCTestCase {
         
         let stockService = StockService()
         
-        stockService.getStockPrice("TESTEX", symbol: "FOOBAR", completionHandler:{(price:Double) -> Void in
+        stockService.getStockPrice("NYTBEX", symbol: "DUJI", completionHandler:{(price:Double) -> Void in
             print("value: \(price)")
             
             XCTAssert(price > 0, "The price should be greater than zero")
@@ -40,6 +40,7 @@ class StockFighterTests: XCTestCase {
         self.waitForExpectationsWithTimeout(10.0, handler: nil)
     }
     
+    
     func testOrderbook() {
         
         var expectation:XCTestExpectation?
@@ -48,8 +49,8 @@ class StockFighterTests: XCTestCase {
         
         let stockService = StockService()
         
-        stockService.getOrderbook("TESTEX", symbol: "FOOBAR", completionHandler:{(price:Double) -> Void in
-            print("value: \(price)")
+        stockService.getOrderbook("NYTBEX", symbol: "DUJI", completionHandler:{(orderBook:NSDictionary?) -> Void in
+            print("orderBook: \(orderBook)")
             
 //            XCTAssert(price > 0, "The price should be greater than zero")
             
@@ -65,5 +66,4 @@ class StockFighterTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
 }
